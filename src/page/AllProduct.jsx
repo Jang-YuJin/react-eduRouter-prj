@@ -5,7 +5,7 @@ const AllProduct = () => {
   const [products, setProducts] = useState(null);
 
   const getProducts = async() => {
-    let response = await fetch('http://localhost:5000/products');
+    let response = await fetch('https://my-json-server.typicode.com/Jang-YuJin/react-eduRouter-prj/products');
     let data = await response.json();
 console.log(data);
     setProducts(data);
