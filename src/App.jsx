@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './component/Navbar'
 import { Routes, Route } from 'react-router-dom';
 import AllProduct from './page/AllProduct'
@@ -20,10 +21,11 @@ import DetailProduct from './page/DetailProduct'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [selectMenu, setSelectMenu] = useState('');
 
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar setSelectMenu={setSelectMenu} selectMenu={selectMenu}></Navbar>
       <Routes>
         <Route path='/' element={<AllProduct></AllProduct>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
