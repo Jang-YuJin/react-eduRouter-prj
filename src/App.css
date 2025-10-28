@@ -45,6 +45,10 @@
     color: #3572EF;
 }
 
+.menu-bar{
+    display: none;
+}
+
 .search-container{
     padding: 5px 5px;
     border: 1px solid oklch(67.22% .0355 279.77deg);
@@ -148,4 +152,123 @@
 
 .search-password, .search-id, .signup{
     cursor: pointer;
+}
+
+/* 패드용 */
+@media screen and (max-width: 1024px){
+.head-container{
+    padding: 20px 20px;
+}
+
+.menu-container{
+    padding: 5px 10px;
+    height: auto;
+}
+
+.menu-item{
+    padding: 0 10px;
+    font-size: 12px;
+}
+
+.search-container{
+    margin-inline: 0px;
+    width: 50%;
+}
+
+.search-container input{
+    font-size: 12px;
+}
+
+.items-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img{
+    height: 80%;
+}
+
+.view-container{
+    margin-bottom: 30px;
+}
+
+.menu-bar{
+    display: block;
+}
+
+.menu.off{
+    display: none;
+}
+
+.menu.on{
+    top: 0;
+    left: 0;
+    width: 20vb;
+    height: 100%;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-size: larger;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+.menu.on li{
+    margin: 10px 20px;
+}
+
+.menu-item:hover, .select-menu{
+    color: #739EC9;
+}
+
+.close-container.off{
+    display: none;
+}
+
+.close-container.on{
+    display: contents;
+}
+
+.menu-close-btn{
+    top: 0;
+    left: 20vb;
+    position: absolute;
+    background: rgb(0, 0, 0);
+    color: white;
+}
+}
+
+/* 핸드폰 화면 */
+@media screen and (max-width: 450px){
+.head-container{
+    padding: 20px 20px;
+}
+
+.logo-img{
+    width: 150px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.menu-item{
+    padding: 0 10px;
+    font-size: 12px;
+}
+
+.menu-container{
+    padding: 5px 10px;
+    height: auto;
+}
+
+
+.search-container{
+    margin-inline: 0px;
+    width: 80%;
+}
+
+.search-container input{
+    font-size: 12px;
+}
 }
