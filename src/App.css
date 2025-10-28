@@ -162,14 +162,6 @@
     display: contents;
 }
 
-.menu-bar{
-    display: block;
-}
-
-.menu.off{
-    display: none;
-}
-
 /* 패드용 */
 @media screen and (max-width: 1024px){
 .head-container{
@@ -212,7 +204,7 @@
     display: block;
 }
 
-.menu.off{
+.menu{
     display: none;
 }
 
