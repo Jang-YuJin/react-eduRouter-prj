@@ -87,8 +87,14 @@
     margin-right: 15px;
 }
 
-.card-container:hover{
-    transform: scale(1.1);
+.card-img:hover{
+    transform: scale(1.05);
+}
+
+.title-container{
+    margin-top: 5px;
+    font-size: large;
+    font-weight: bolder;
 }
 
 .view-container{
@@ -160,6 +166,39 @@
 
 .close-container.on{
     display: contents;
+}
+
+.mg-right10{
+    margin-right: 10px;
+}
+
+.shoping-cart-btn{
+    cursor: pointer;
+}
+
+.detail-img{
+    width: 100%;
+}
+
+.mg-top40{
+    margin-top: 40px;
+}
+
+.mg-top10{
+    margin-top: 10px;
+}
+
+.detail-title{
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.detail-desc{
+    font-size: medium;
+}
+
+.detail-textbook{
+
 }
 
 /* 패드용 */
@@ -245,6 +284,10 @@
     position: absolute;
     background: rgb(0, 0, 0);
     color: white;
+}
+
+.mobile-mg-top20px{
+    margin-top: 20px;
 }
 }
 

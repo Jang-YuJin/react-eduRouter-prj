@@ -1,8 +1,15 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const CardProduct = ({ item }) => {
+  const navigate = useNavigate();
+
+  const showDetail = () => {
+    navigate(`/product/${item.id}`);
+  };
+
   return (
-    <div className='card-container'>
+    <div className='card-container' onClick={showDetail}>
       <div><img src={item?.img} alt={item?.title} className='card-img'></img></div>
       <div className='title-container'>{item?.title}</div>
       <div className='price-container'>{item?.price.toLocaleString('ko-KR')} \</div>

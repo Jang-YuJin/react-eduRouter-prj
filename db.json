@@ -7,7 +7,8 @@
             "price":50000,
             "choice":true,
             "new":true,
-            "textbook":["PDF", "Notion 링크", "인쇄용 흑백 PDF"]
+            "textbook":["PDF", "Notion 링크", "인쇄용 흑백 PDF"],
+            "descript":"이 강의는 HTML/CSS를 처음 들으시는 분들을 위한 강의입니다. 아주 쉽고 재미있게 알려드리겠습니다! 맨몸과 컴퓨터만 있으면 나도 웹페이지 디자인을 할 수 있다! 지금 당장 결제하세요!"
 
         },
         {
@@ -17,8 +18,8 @@
             "price":130000,
             "choice":true,
             "new":true,
-            "textbook":["PDF", "Notion 링크", "인쇄용 흑백 PDF"]
-
+            "textbook":["PDF", "Notion 링크", "인쇄용 흑백 PDF"],
+            "descript":"실무에서 바로 쓰이는 오라클의 핵심 기능과 쿼리 작성법을 체계적으로 정리하며, 마무리까지 확실하게 다지는 종합 완성 강의입니다."
         },
         {
             "id":2,
@@ -27,8 +28,8 @@
             "price":150000,
             "choice":false,
             "new":true,
-            "textbook":["PDF", "Notion 링크", "인쇄용 흑백 PDF"]
-
+            "textbook":["PDF", "Notion 링크", "인쇄용 흑백 PDF"],
+            "descript":"데이터 품질과 성능을 좌우하는 데이터베이스 설계 원칙을 이론과 예시를 통해 이해하고, 실무에서 적용 가능한 설계 감각을 기르는 강의입니다."
         },
         {
             "id":3,
@@ -37,8 +38,8 @@
             "price":80000,
             "choice":false,
             "new":true,
-            "textbook":["PDF", "Notion 링크", "인쇄용 흑백 PDF"]
-
+            "textbook":["PDF", "Notion 링크", "인쇄용 흑백 PDF"],
+            "descript":"웹 페이지의 구조를 잡는 HTML과 디자인을 담당하는 CSS를 기초부터 개념 중심으로 익히며, 실습을 통해 바로 적용해보는 입문자 친화형 강의입니다."
         },
         {
             "id":4,
@@ -47,8 +48,8 @@
             "price":120000,
             "choice":true,
             "new":false,
-            "textbook":["PDF", "Notion 링크", "인쇄용 흑백 PDF"]
-
+            "textbook":["PDF", "Notion 링크", "인쇄용 흑백 PDF"],
+            "descript":"기본을 넘어서 자바의 고급 문법, 메모리 구조, 예외 처리, 디자인패턴 등 실전에서 필요한 심화 개념을 사례와 함께 깊이 있게 다루는 과정입니다."
         },
         {
             "id":5,
@@ -57,8 +58,8 @@
             "price":115000,
             "choice":false,
             "new":false,
-            "textbook":["PDF", "Notion 링크", "인쇄용 흑백 PDF"]
-
+            "textbook":["PDF", "Notion 링크", "인쇄용 흑백 PDF"],
+            "descript":"자바의 기초 문법과 객체지향 프로그래밍 개념을 이해하고 간단한 코드 작성까지 경험하며 프로그래밍 사고를 다지는 입문자를 위한 준비 과정입니다."
         },
         {
             "id":6,
@@ -67,8 +68,8 @@
             "price":90000,
             "choice":true,
             "new":false,
-            "textbook":["PDF", "Notion 링크", "인쇄용 흑백 PDF"]
-
+            "textbook":["PDF", "Notion 링크", "인쇄용 흑백 PDF"],
+            "descript":"가장 쉬운 언어로 꼽히는 파이썬을 통해 프로그래밍의 기본 개념과 문법을 익히고 간단한 예제를 따라 하며 즐겁게 배워보는 스타터 강의입니다."
         },
         {
             "id":7,
@@ -77,8 +78,8 @@
             "price":150000,
             "choice":false,
             "new":true,
-            "textbook":["PDF", "Notion 링크", "인쇄용 흑백 PDF"]
-
+            "textbook":["PDF", "Notion 링크", "인쇄용 흑백 PDF"],
+            "descript":"이 강의는 스프링프레임워크 고급 강의입니다. 더욱더 깊고 심도 있는 내용을 알고싶으신 분들께 추천드립니다."
         },
         {
             "id":8,
@@ -87,8 +88,8 @@
             "price":80000,
             "choice":true,
             "new":true,
-            "textbook":["PDF", "Notion 링크", "인쇄용 흑백 PDF"]
-
+            "textbook":["PDF", "Notion 링크", "인쇄용 흑백 PDF"],
+            "descript":"이 강의는 Python 강의로 프로그래밍을 처음 접하시는 분들을 위한 강의입니다. 이해하기 쉽고 트렌디한 언어인 Python을 알아보도록 하죠."
         },
         {
             "id":9,
@@ -97,8 +98,8 @@
             "price":50000,
             "choice":false,
             "new":true,
-            "textbook":["PDF", "Notion 링크", "인쇄용 흑백 PDF"]
-
+            "textbook":["PDF", "Notion 링크", "인쇄용 흑백 PDF"],
+            "descript":"이 강의는 JAVA 중급 강의입니다. 기본 JAVA는 알겠는데 쓰레드? 파일업로드, 다운로드? 벌써부터 막막하시다면 이 강의로 해결해보시죠. JAVA 너를 잡아!"
         },
         {
             "id":10,
@@ -107,8 +108,8 @@
             "price":80000,
             "choice":true,
             "new":false,
-            "textbook":["PDF", "Notion 링크", "인쇄용 흑백 PDF"]
-
+            "textbook":["PDF", "Notion 링크", "인쇄용 흑백 PDF"],
+            "descript":"이 강의는 JAVA를 처음 배우는 분들을 위한 강의입니다. 변수? 배열? 클래스? 어려운 개념을 쉽게 알려드리겠습니다. JAVA를 잡아보자!"
         },
         {
             "id":11,
@@ -117,8 +118,8 @@
             "price":120000,
             "choice":true,
             "new":true,
-            "textbook":["PDF", "Notion 링크", "인쇄용 흑백 PDF"]
-
+            "textbook":["PDF", "Notion 링크", "인쇄용 흑백 PDF"],
+            "descript":"이 강의는 JAVA 언어를 교욱합니다. 길게 말하지 않겠습니다. This Is JAVA!"
         },
         {
             "id":12,
@@ -127,8 +128,8 @@
             "price":180000,
             "choice":true,
             "new":true,
-            "textbook":["PDF", "Notion 링크", "인쇄용 흑백 PDF"]
-
+            "textbook":["PDF", "Notion 링크", "인쇄용 흑백 PDF"],
+            "descript":"이 강의는 스프링프레임워크 기본 강의입니다. 기본이라고 하지만 탄탄한 내용을 담았습니다. 이해하기 쉬운 예제들과 실습으로 스프링프레임워크를 정복하시죠!"
         },
         {
             "id":13,
@@ -137,8 +138,8 @@
             "price":160000,
             "choice":false,
             "new":false,
-            "textbook":["PDF", "Notion 링크", "인쇄용 흑백 PDF"]
-
+            "textbook":["PDF", "Notion 링크", "인쇄용 흑백 PDF"],
+            "descript":"이 강의는 스프링프레임워크에 대해서 심도있는 내용을 다루고 있습니다. 개발경력이 있는데도 스프링을 제대로 모르겠다? 그렇다면 이 강의를 들어보세요."
         }
     ]
 }

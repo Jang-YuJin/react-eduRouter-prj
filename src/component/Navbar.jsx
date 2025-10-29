@@ -8,7 +8,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 import { useNavigate } from 'react-router-dom'
 library.add(fas, far, fab)
 
-const Navbar = ({ setSelectMenu, selectMenu }) => {
+const Navbar = ({ setSelectMenu, selectMenu, authenticate, setAuthenticate }) => {
   const [onOff, setOnOff] = useState('off');
   const [closeOnOff, setCloseOnOff] = useState('off');
   const navigate = useNavigate();
@@ -16,7 +16,14 @@ const Navbar = ({ setSelectMenu, selectMenu }) => {
   const menuList = ['웹개발', 'JAVA', 'Python', 'DB', 'HTML/CSS', 'about'];
 
   const goToLogin = () => {
+    setSelectMenu('');
     navigate('/login');
+  }
+
+  const goToLogout = () => {
+    setSelectMenu('');
+    setAuthenticate(false);
+    navigate('/');
   }
 
   const goToMain = () => {
@@ -41,8 +48,18 @@ const Navbar = ({ setSelectMenu, selectMenu }) => {
       <div className='head-container'>
         <img src={'./img/logo.png'} alt='logo' className='logo-img' onClick={goToMain}></img>
         <div className='login-container'>
-          <FontAwesomeIcon icon="fa-regular fa-user" />
-          <div className='login' onClick={goToLogin}>로그인</div>
+          {authenticate ? 
+            <FontAwesomeIcon icon="fa-solid fa-bag-shopping" className='mg-right10 shoping-cart-btn'/>
+            :
+            ''
+          }
+          <FontAwesomeIcon icon="fa-regular fa-user"/>
+          {authenticate ?
+            <div className='login' onClick={goToLogout}>로그아웃</div>
+            :
+            <div className='login' onClick={goToLogin}>로그인</div>
+          }
+          
         </div>
       </div>
       <div className='menu-container'>

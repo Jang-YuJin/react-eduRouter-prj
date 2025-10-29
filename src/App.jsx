@@ -5,7 +5,8 @@ import Navbar from './component/Navbar'
 import { Routes, Route } from 'react-router-dom';
 import AllProduct from './page/AllProduct'
 import Login from './page/Login'
-import DetailProduct from './page/DetailProduct'
+import { Analytics } from "@vercel/analytics/react"
+import PrivateRoute from './route/PrivateRoute';
 
 // 1. 전체상품, 로그인, 상품상세 페이지
 // 1-1. Navbar 만들기
@@ -20,16 +21,16 @@ import DetailProduct from './page/DetailProduct'
 // 8. 상품을 검색할 수 있다.
 
 function App() {
-  const [count, setCount] = useState(0)
   const [selectMenu, setSelectMenu] = useState('');
+  const [authenticate, setAuthenticate] = useState(false);
 
   return (
     <>
-      <Navbar setSelectMenu={setSelectMenu} selectMenu={selectMenu}></Navbar>
+      <Navbar setSelectMenu={setSelectMenu} selectMenu={selectMenu} authenticate={authenticate} setAuthenticate={setAuthenticate}></Navbar>
       <Routes>
         <Route path='/' element={<AllProduct></AllProduct>}></Route>
-        <Route path='/login' element={<Login></Login>}></Route>
-        <Route path='/product/:id' element={<DetailProduct></DetailProduct>}></Route>
+        <Route path='/login' element={<Login setAuthenticate={setAuthenticate}></Login>}></Route>
+        <Route path='/product/:id' element={<PrivateRoute authenticate={authenticate}></PrivateRoute>}></Route>
       </Routes>
     </>
   )
