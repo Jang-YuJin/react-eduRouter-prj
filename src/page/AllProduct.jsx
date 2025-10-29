@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import CardProduct from '../component/CardProduct'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import GridView from '../component/GridView';
+import ListView from '../component/ListView';
 
-const AllProduct = () => {
+const AllProduct = ({ viewType, setViewType }) => {
   const [products, setProducts] = useState([]);
 
   const getProducts = async() => {
@@ -25,18 +26,29 @@ const AllProduct = () => {
         <Row>
           <Col lg={1}>
             <div className='view-container'>
-              <div className='grid-btn'><img className='grid-img' src='/img/grid.png'></img></div>
-              <div className='list-btn'><img className='list-img' src='/img/list.png'></img></div>
+              <div className={`grid-btn ${viewType === 'Grid' ? 'select-view-btn' : ''}`} onClick={() => {setViewType('Grid')}}><img className='grid-img' src='/img/grid.png'></img></div>
+              <div className={`list-btn ${viewType === 'List' ? 'select-view-btn' : ''}`} onClick={() => {setViewType('List')}}><img className='list-img' src='/img/list.png'></img></div>
             </div>
           </Col>
         </Row>
       </Container>
       <Container>
-        <Row>
-      {products.map((item) => (
-        <Col lg={3}><CardProduct item={item}></CardProduct></Col>
-      ))}
-        </Row>
+        {viewType === 'Grid'
+        ?
+          <Row>
+            {products.map((item) => (
+              <Col lg={3}><GridView item={item}></GridView></Col>
+            ))}
+          </Row>
+        :
+          <div>
+          {products.map((item) => (
+            <Row>
+              <Col lg={12}><ListView item={item}></ListView></Col>
+            </Row>
+          ))}
+          </div>
+        }
       </Container>
     </div>
   )

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
 
-const CardProduct = ({ item }) => {
+const GridView = ({ item }) => {
   const navigate = useNavigate();
 
   const showDetail = () => {
@@ -21,4 +21,4 @@ const CardProduct = ({ item }) => {
   )
 }
 
-export default CardProduct
+export default GridView

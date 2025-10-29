@@ -97,6 +97,10 @@
     font-weight: bolder;
 }
 
+.cursor-pointer{
+    cursor: pointer;
+}
+
 .view-container{
     display: flex;
 }
@@ -194,11 +198,34 @@
 }
 
 .detail-desc{
-    font-size: medium;
+    font-size: small;
 }
 
-.detail-textbook{
+.list-container{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
 
+.list-product-img{
+    width: 30%;
+}
+
+.list-product-img:hover{
+    transform: scale(1.05);
+}
+
+.list-desc-container{
+    margin-left: 20px;
+}
+
+.desc-container{
+    font-size: small;
+    margin-top: 10px;
+}
+
+.select-view-btn{
+    border-color: #378CE7;
 }
 
 /* 패드용 */
@@ -321,5 +348,47 @@
 
 .search-container input{
     font-size: 12px;
+}
+
+.list-container{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.list-product-img{
+    width: 100%;
+}
+
+.list-product-img:hover{
+    transform: scale(1.05);
+}
+
+.list-desc-container{
+    margin-left: 20px;
+}
+
+.desc-container{
+    font-size: small;
+    margin-top: 10px;
+}
+
+.login-form-container{
+    height: 100vmin;
+    width: 100%;
+}
+
+.id-input, .password-input{
+    width: 250px;
+}
+
+.login-btn{
+    width: 250px;
+    height: 40px;
+}
+
+.find-login-info-container{
+    padding: 5px 0;
+    width: 250px;
 }
 }

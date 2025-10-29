@@ -23,12 +23,13 @@ import PrivateRoute from './route/PrivateRoute';
 function App() {
   const [selectMenu, setSelectMenu] = useState('');
   const [authenticate, setAuthenticate] = useState(false);
+  const [viewType, setViewType] = useState('Grid');
 
   return (
     <>
       <Navbar setSelectMenu={setSelectMenu} selectMenu={selectMenu} authenticate={authenticate} setAuthenticate={setAuthenticate}></Navbar>
       <Routes>
-        <Route path='/' element={<AllProduct></AllProduct>}></Route>
+        <Route path='/' element={<AllProduct viewType={viewType} setViewType={setViewType}></AllProduct>}></Route>
         <Route path='/login' element={<Login setAuthenticate={setAuthenticate}></Login>}></Route>
         <Route path='/product/:id' element={<PrivateRoute authenticate={authenticate}></PrivateRoute>}></Route>
       </Routes>
