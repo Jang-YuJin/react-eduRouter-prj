@@ -41,7 +41,19 @@ const Navbar = ({ setSelectMenu, selectMenu, authenticate, setAuthenticate }) =>
     setCloseOnOff('off');
   }
 
-  useEffect(() => {console.log(selectMenu)}, [selectMenu]);
+  const search = (e) => {
+    if(e._reactName === 'onClick'){
+      let keyword = e.target.parentElement.nextElementSibling.value;
+      
+      navigate(`/?q=${keyword}`);
+    } else{
+      if(e.key === 'Enter'){
+        let keyword = e.target.value;
+
+        navigate(`/?q=${keyword}`);
+      }
+    }
+  };
 
   return (
     <div>
@@ -70,8 +82,10 @@ const Navbar = ({ setSelectMenu, selectMenu, authenticate, setAuthenticate }) =>
           ))}
         </ul>
         <div className='search-container'>
-          <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" className='search-btn'/>
-          <input type='text' placeholder='강의를 검색해보세요.'></input>
+          <div className='search-img-container' onClick={(event) => search(event)}>
+            <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" className='search-btn'/>
+          </div>
+          <input type='text' placeholder='강의를 검색해보세요.' onKeyDown={(event) => search(event)}></input>
         </div>
         <div className={`close-container ${closeOnOff}`}>
           <button className='menu-close-btn' onClick={settingCloseBtnOff}>X</button>

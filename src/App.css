@@ -66,6 +66,10 @@
     cursor: pointer;
 }
 
+.search-img-container{
+    display: contents;
+}
+
 .items-container{
     padding: 40px 0;
 }

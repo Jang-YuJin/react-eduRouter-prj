@@ -4,12 +4,15 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import GridView from '../component/GridView';
 import ListView from '../component/ListView';
+import { useSearchParams } from 'react-router-dom';
 
 const AllProduct = ({ viewType, setViewType }) => {
   const [products, setProducts] = useState([]);
+  const [query, setQuery] = useSearchParams();
 
   const getProducts = async() => {
-    let url = 'https://my-json-server.typicode.com/Jang-YuJin/react-eduRouter-prj/products';
+    let keyword = query.get('q') || '';
+    let url = `https://my-json-server.typicode.com/Jang-YuJin/react-eduRouter-prj/products?q=${keyword}`;
     let response = await fetch(url);
     let data = await response.json();
 
@@ -18,7 +21,7 @@ const AllProduct = ({ viewType, setViewType }) => {
 
   useEffect(() => {
     getProducts();
-  }, []);
+  }, [query]);
 
   return (
     <div className='items-container'>
